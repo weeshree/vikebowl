@@ -158,7 +158,7 @@ router.post("/forgot", function(req, res)
                 service: 'Gmail',
                 auth: {
                     user: 'dullessciencebowl@gmail.com',
-                    pass: 'Meta34cognition43' // process.env.GMAILPW
+                    pass: process.env.GMAILPW
                 }
             });
             var mailOptions = {
@@ -227,7 +227,7 @@ router.post('/reset/:token', function(req, res) {
         service: 'Gmail', 
         auth: {
           user: 'dullessciencebowl@gmail.com',
-          pass: 'Meta34cognition43' // process.env.GMAILPW
+          pass:  process.env.GMAILPW
         }
       });
       var mailOptions = {
